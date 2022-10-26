@@ -90,7 +90,7 @@ public partial class GamePage : ContentPage
 		App.GameRepository.AddGame(new Game()
 		{
 			Type = gameOperand,
-			DatePlayed = DateTime.Now,
+			DatePlayed = DateTime.Now.Date,
 			Score = score
 			
 

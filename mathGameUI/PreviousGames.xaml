@@ -6,17 +6,28 @@
              BackgroundImageSource="pizarron.jpg">
     <ScrollView>
         <VerticalStackLayout
-            Padding="200,100,200,50">
+            Padding="50,100,50,50">
+            <Grid ColumnDefinitions="*,*,*,*,*"
+                              RowDefinitions="50"
+                              ColumnSpacing="6">
+
+                <Label Grid.Column="0" Text="Fecha" FontSize="32"/>
+                <Label Grid.Column="1" Text="Juego" FontSize="32"/>
+                <Label Grid.Column="2" Text="Puntuación" FontSize="32"/>
+                <Label Grid.Column="3" Text="Id" FontSize="32"/>
+               
+            </Grid>
             <CollectionView x:Name="gamesList">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Grid ColumnDefinitions="*,*,*,*,*"
-                              RowDefinitions="50">
+                              RowDefinitions="50"
+                              ColumnSpacing="6">
 
-                            <Label Grid.Column="0" Text="{Binding DatePlayed}" FontSize="12"/>
-                            <Label Grid.Column="1" Text="{Binding Type}" FontSize="12"/>
-                            <Label Grid.Column="2" Text="{Binding Score}" FontSize="12"/>
-                            <Label Grid.Column="3" Text="{Binding Id}" FontSize="12"/>
+                            <Label Grid.Column="0" Text="{Binding DatePlayed}" FontSize="32"/>
+                            <Label Grid.Column="1" Text="{Binding Type}" FontSize="32"/>
+                            <Label Grid.Column="2" Text="{Binding Score}" FontSize="32"/>
+                            <Label Grid.Column="3" Text="{Binding Id}" FontSize="32"/>
                             <Button Grid.Column="4" Text="Delete" 
                                     BindingContext="{Binding Id}"
                                     Clicked="OnDelete"/>
