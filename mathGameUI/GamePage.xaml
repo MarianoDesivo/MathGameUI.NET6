@@ -31,7 +31,7 @@
 
             <Button 
             x:Name="SubmitAnswer"
-            Text="Answer"
+            Text="Enviar"
             HorizontalOptions="Center"
             Clicked="OnAnswerSubmitted"
             FontSize="32"
